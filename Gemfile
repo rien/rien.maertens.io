@@ -5,6 +5,8 @@ gem 'slim'
 
 gem 'nanoc'
 
+gem 'byebug'
+
 gem 'kramdown'
 
 gem 'sass'

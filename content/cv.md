@@ -30,7 +30,7 @@ contact:
       url: https://www.google.be/maps/place/Admiraal+Ronarchstraat+11,+8600+Diksmuide/@51.0325796,2.8637789,17z
 
 description: >
-    I am a **student Computer Science at Ghent University**. I am mostly interested in the Web as a whole (web development, security, servers, networking, ...), Free and Open Source Software and programming languages. Alongside my studies, I preside a student society focused around Computer Science, represent my fellow students in the student council, and enjoy being creative on stage.
+    I am a **student Computer Science at Ghent University**. I am mostly interested in the Web as a whole (web development, security, servers, networking, ...), Free and Open Source Software and programming languages. Alongside my studies, I preside a student society focused around Computer Science, represent my fellow students in student councils, and enjoy being creative on stage.
 experience_work:
     - function: Teaching Assistant
       employer: Ghent University

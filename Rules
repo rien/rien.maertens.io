@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+require 'byebug'
 
 compile '/cv.md' do
   filter :kramdown
