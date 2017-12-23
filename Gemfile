@@ -11,6 +11,11 @@ gem 'sass'
 
 gem 'adsf'
 
+gem 'therubyracer'
+
+gem 'autoprefixer-rails'
+
 group :nanoc do
   gem 'guard-nanoc'
+  gem 'guard-livereload'
 end

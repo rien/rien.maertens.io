@@ -1,27 +1,33 @@
 doctype html
 html lang="en"
   head
-    meta charset="utf-8"
-    title A Brand New Nanoc Site -
-      = @item[:title]
-    link rel="stylesheet" href="/stylesheet.css"
-    meta name="generator" content="Nanoc"
-      = Nanoc::VERSION
+    title = @item[:title]
+
+    meta charset="UTF-8"
+    meta name="generator" content="Nanoc #{Nanoc::VERSION}"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    - item[:og].to_a.each do |prop, value|
+      meta name="og:#{prop}" content=value
+
+    / PureCSS https://purecss.io/
+    link [
+      rel="stylesheet"
+      href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+      integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
+      crossorigin="anonymous"
+      ]
+
+    / Font Awesome 5 https://fontawesome.com/
+    link [
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.2/css/all.css"
+      integrity="sha384-bJB2Wn8ZuuMwYA12t6nmPqVTqT64ruKTAWqdxs/Oal3vexA7RPAo3FtVU5hIil2E"
+      crossorigin="anonymous"
+      ]
+
+    link rel="stylesheet" href="/assets/stylesheet.css"
+    link rel="stylesheet" href="/assets/print.css"
+
   body
-    #main
-      = yield
-    #sidebar
-      h2 Documentation
-      ul
-        li
-          a href="http://nanoc.ws/doc/" Documentation
-        li
-          a href="http://nanoc.ws/doc/tutorial/"Tutorial
-      h2 Community
-      ul
-        li
-          a href="http://groups.google.com/group/nanoc/" Discussion group
-        li
-          a href="https://gitter.im/nanoc/nanoc" Gitter channel
-        li
-          a href="http://nanoc.ws/contributing/"  Contributing
+    main
+      == yield

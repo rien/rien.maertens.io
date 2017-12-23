@@ -1,0 +1,18 @@
+@media print{
+  .element {
+    font-size: 9px;
+  }
+  .cv {
+    padding: 0;
+  }
+  table {
+    page-break-inside: avoid;
+  }
+  .sections {
+    .section {
+      page-break-before: auto;
+      page-break-inside: avoid;
+      page-break-after: auto;
+    }
+  }
+}
