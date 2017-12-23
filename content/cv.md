@@ -5,7 +5,8 @@ og:
   type: website
   url: https://rien.maertens.io/cv/
   image: https://rien.maertens.io/rienmaertens.png
-  description: Curriculum Vitae of Rien Maerten, a student Computer Science
+  'image:alt': Rien Maertens
+  description: Curriculum Vitae of Rien Maertens, a student Computer Science
 
 firstname: Rien
 lastname: Maertens

@@ -7,7 +7,7 @@ html lang="en"
     meta name="generator" content="Nanoc #{Nanoc::VERSION}"
     meta name="viewport" content="width=device-width, initial-scale=1"
     - item[:og].to_a.each do |prop, value|
-      meta name="og:#{prop}" content=value
+      meta property="og:#{prop}" content=value
 
     / PureCSS https://purecss.io/
     link [
