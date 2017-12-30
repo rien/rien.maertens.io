@@ -1,12 +1,15 @@
 ---
 title: Curriculum Vitae — Rien Maertens
+navigation: CV
 og:
-  title: Rien Maertens' CV
   type: website
   url: https://rien.maertens.io/cv/
-  image: https://rien.maertens.io/rienmaertens.png
+  image: https://rien.maertens.io/img/rienmaertens.png
   'image:alt': Rien Maertens
   description: Curriculum Vitae of Rien Maertens, a student Computer Science
+
+# Disable purecss
+purecss: false
 
 first_name: Rien
 last_name: Maertens

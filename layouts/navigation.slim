@@ -1,0 +1,9 @@
+nav
+  ul.navigation
+    - navigables.each do |item|
+      li.nav-item
+        a class="#{'active' if active? item}" href=item.path
+          = item[:navigation]
+
+input#nav-trigger.nav-trigger type='checkbox'
+label for='nav-trigger'

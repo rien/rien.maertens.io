@@ -1,21 +1,34 @@
 doctype html
 html lang="en"
   head
-    title = @item[:title]
-
     meta charset="UTF-8"
+
+    title = @item[:title]
     meta name="generator" content="Nanoc #{Nanoc::VERSION}"
     meta name="viewport" content="width=device-width, initial-scale=1"
-    - item[:og].to_a.each do |prop, value|
+
+    meta property="og:title" content=@item[:title]
+    - if @item[:description] and not @item[:og]&.has_key? :description
+      meta property="og:description" content=@item[:description]
+
+    - @item[:og].to_a.each do |prop, value|
       meta property="og:#{prop}" content=value
 
-    / PureCSS https://purecss.io/
-    / link [
-    /   rel="stylesheet"
-    /   href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
-    /   integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
-    /   crossorigin="anonymous"
-    /   ]
+    / Favicon studd
+    link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"
+    link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"
+    link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"
+    link rel="manifest" href="/manifest.json"
+    link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000"
+    meta name="theme-color" content="#ffffff"
+
+    / Normalize.css https://necolas.github.io/normalize.css/
+    link [
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" 
+      integrity="sha256-HxaKz5E/eBbvhGMNwhWRPrAR9i/lG1JeT4mD6hCQ7s4=" 
+      crossorigin="anonymous"
+      ]
 
     / Font Awesome 5 https://fontawesome.com/
     link [
@@ -25,9 +38,11 @@ html lang="en"
       crossorigin="anonymous"
       ]
 
-    link rel="stylesheet" href="/assets/stylesheet.css"
-    link rel="stylesheet" href="/assets/print.css"
+    link rel="stylesheet" href="/css/stylesheet.css"
+    link rel="stylesheet" href="/css/print.css"
+    link rel="stylesheet" href="/css/nav.css"
 
   body
+    == render '/navigation.slim'
     main
       == yield
