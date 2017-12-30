@@ -8,26 +8,14 @@ og:
   'image:alt': Rien Maertens
   description: Curriculum Vitae of Rien Maertens, a student Computer Science
 
-firstname: Rien
-lastname: Maertens
-contact:
-    - icon: fab fa-github
-      value: rien
-      url: https://github.com/rien
-    - icon: fas fa-phone
-      value: +32 491 07 03 45
-    - icon: fas fa-at
-      value: maertensrien@gmail.com
-      url: 'mailto:maertensrien@gmail.com'
-    - icon: fas fa-at
-      value: rien.maertens@ugent.be
-      url: 'mailto:rien.maertens@ugent.be'
-    - icon: fas fa-map-marker
-      value: |-
-        Adm. Ronarch straat 11,
-        8600 Diksmuide,
-        Belgium
-      url: https://www.google.be/maps/place/Admiraal+Ronarchstraat+11,+8600+Diksmuide/@51.0325796,2.8637789,17z
+first_name: Rien
+last_name: Maertens
+
+github: rien
+email: maertensrien@gmail.com
+homepage: "rien.maertens.io"
+phone: +32 491 07 03 45
+address: Adm. Ronarch straat 11, 8600 Diksmuide, Belgium
 
 description: >
     I am a **student Computer Science at Ghent University**. I am mostly interested in the Web as a whole (web development, security, servers, networking, ...), Free and Open Source Software and programming languages. Alongside my studies, I preside a student society focused around Computer Science, represent my fellow students in student councils, and enjoy being creative on stage.
@@ -90,7 +78,7 @@ experience_other:
       info:
         - Ghent Student Council
         - Faculty of Sciences Student Counsil
-        - Educational Comittie Computer Science
+        - Educational Committee Computer Science
 
 # Stars: 3 (experienced), 2 (good), 1 (basic)
 programming:

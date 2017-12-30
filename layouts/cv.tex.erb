@@ -1,0 +1,83 @@
+\documentclass[11pt,a4paper]{moderncv}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fontspec}
+\usepackage{textcomp}
+\usepackage{bbding}
+\usepackage{enumitem}
+\usepackage[scale=0.75]{geometry}
+
+
+\moderncvstyle[center]{banking}
+\moderncvcolor{grey}
+
+\name{<%= item[:first_name] %>}{<%= item[:last_name] %>}
+\address{<%= item[:address].split(',').join('}{') %>}
+\phone[phone]{<%= item[:phone] %>}
+\social[github]{<%= item[:github] %>}
+\email{<%= item[:email] %>}
+\homepage{<%= item[:homepage] %>}
+
+
+%\renewcommand{\familydefault}{\ttdefault}
+
+\begin{document}
+\makecvtitle
+<%= md2tex item[:description] %>
+
+\section{Experience}
+\subsection{Work}
+<% item[:experience_work].each do |exp| %>
+  <%= cv_entry exp, :period, :employer, :function, nil, nil, :description %>
+    <% if exp[:info] %>
+      \begin{itemize}
+        <% exp[:info].each do |info| %>
+          \item <%= info %>
+        <% end %>
+      \end{itemize}
+    <% end %>
+<% end %>
+
+\subsection{Other}
+<% item[:experience_other].each do |exp| %>
+  <%= cv_entry exp, :period, :employer, :function, nil, nil, :description %>
+  <% if exp[:info] %>
+    \begin{itemize}
+      <% exp[:info].each do |info| %>
+        \item <%= md2tex info %>
+      <% end %>
+    \end{itemize}
+  <% end %>
+<% end %>
+
+\section{Skills}
+\subsection{Programming}
+<%= latex_proficiencies item[:programming] %>
+
+\subsection{Technologies}
+<%= latex_proficiencies item[:technologies] %>
+
+\subsection{Languages}
+<%= latex_proficiencies item[:languages] %>
+
+\section{Education}
+<% item[:education].each do |edu| %>
+  <%= cv_entry edu, :graduation, :institution, :degree, nil, nil, :extras %>
+<% end %>
+
+\section{Miscelaneous}
+\subsection{Hobbies}
+\begin{itemize}
+  <% item[:misc][:hobbies].each do |hobby| %>
+    \item <%= md2tex hobby %>
+  <% end %>
+\end{itemize}
+
+\subsection{Achievements}
+\begin{itemize}
+  <% item[:misc][:achievements].each do |achievement| %>
+    \item <%= md2tex achievement %>
+  <% end %>
+\end{itemize}
+
+\end{document}

@@ -1,15 +1,22 @@
 #!/usr/bin/env ruby
 require 'byebug'
+require 'nanoc/latexmk'
 
 compile '/cv.md' do
   filter :kramdown
-  layout '/cv.*'
-  layout '/default.*'
+  layout '/cv.slim'
+  layout '/default.slim'
+end
+
+compile '/**/cv.md', rep: :pdf do
+  layout '/cv.tex.erb'
+  filter :latexmk, engine: :xelatex
+  write ext: 'pdf'
 end
 
 compile '/**/*.md' do
   filter :kramdown
-  layout '/default.*'
+  layout '/default.slim'
 end
 
 compile '/assets/*.scss' do
@@ -30,4 +37,5 @@ compile '/**/*' do
   write item.identifier.to_s
 end
 
-layout '/**/*', :slim
+layout '/**/*.slim', :slim
+layout '/**/*.erb', :erb

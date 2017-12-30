@@ -1,13 +1,26 @@
+ruby:
+  @contacts = []
+
+  add_to(@contacts, :github , 'fab fa-github'   ){ |v| "https://github.com/#{v}" }
+  add_to(@contacts, :phone  , 'fas fa-phone'    )
+  add_to(@contacts, :email  , 'fas fa-at'       ){ |v| "mailto:#{v}" }
+  add_to(@contacts, :address, 'fas fa-map-marker') do
+    'https://www.google.be/maps/place/Admiraal+Ronarchstraat+11,+8600+Diksmuide/@51.0325796,2.8637789,17z'
+  end
+
+
+
+
 article.cv
   header
     .name-contact
       .name
-        h1.firstname = item[:firstname]
-        h2.lastname = item[:lastname]
+        h1.firstname = item[:first_name]
+        h2.lastname = item[:last_name]
       .contact
         h3 Contact me
         ul
-          - item[:contact].each do |contact|
+          - @contacts.each do |contact|
             li
               i class=contact[:icon]
               - if contact[:url]

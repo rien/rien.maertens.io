@@ -5,6 +5,8 @@ gem 'slim'
 
 gem 'nanoc'
 
+gem 'nanoc-latexmk'
+
 gem 'byebug'
 
 gem 'kramdown'
