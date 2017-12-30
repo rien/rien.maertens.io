@@ -1,15 +1,13 @@
 \documentclass[11pt,a4paper]{moderncv}
 
+\usepackage[scale=0.75]{geometry}
 \usepackage[utf8]{inputenc}
-\usepackage{fontspec}
-\usepackage{textcomp}
 \usepackage{bbding}
 \usepackage{enumitem}
-\usepackage[scale=0.75]{geometry}
-
+\usepackage{fontspec}
+\usepackage{textcomp}
 
 \moderncvstyle[center]{banking}
-\moderncvcolor{grey}
 
 \name{<%= item[:first_name] %>}{<%= item[:last_name] %>}
 \address{<%= item[:address].split(',').join('}{') %>}
@@ -18,36 +16,24 @@
 \email{<%= item[:email] %>}
 \homepage{<%= item[:homepage] %>}
 
-
-%\renewcommand{\familydefault}{\ttdefault}
+\AfterPreamble{
+  \hypersetup{
+    pdfauthor={<%= item[:first_name] + ' ' + item[:last_name] %>},
+    pdftitle={CV for <%= item[:first_name] + ' ' + item[:last_name] %>},
+    pdfsubject={},
+    colorlinks=true,
+    urlcolor=blue,
+    linkcolor=black
+  }
+}
 
 \begin{document}
 \makecvtitle
 <%= md2tex item[:description] %>
 
-\section{Experience}
-\subsection{Work}
-<% item[:experience_work].each do |exp| %>
-  <%= cv_entry exp, :period, :employer, :function, nil, nil, :description %>
-    <% if exp[:info] %>
-      \begin{itemize}
-        <% exp[:info].each do |info| %>
-          \item <%= info %>
-        <% end %>
-      \end{itemize}
-    <% end %>
-<% end %>
-
-\subsection{Other}
-<% item[:experience_other].each do |exp| %>
-  <%= cv_entry exp, :period, :employer, :function, nil, nil, :description %>
-  <% if exp[:info] %>
-    \begin{itemize}
-      <% exp[:info].each do |info| %>
-        \item <%= md2tex info %>
-      <% end %>
-    \end{itemize}
-  <% end %>
+\section{Education}
+<% item[:education].each do |edu| %>
+  <%= cv_entry edu, :graduation, :institution, :degree, nil, nil, :extras %>
 <% end %>
 
 \section{Skills}
@@ -60,10 +46,35 @@
 \subsection{Languages}
 <%= latex_proficiencies item[:languages] %>
 
-\section{Education}
-<% item[:education].each do |edu| %>
-  <%= cv_entry edu, :graduation, :institution, :degree, nil, nil, :extras %>
+\section{Experience}
+\subsection{Work}
+<% item[:experience_work].each do |exp| %>
+  \begin{minipage}{\textwidth}
+  <%= cv_entry exp, :period, :employer, :function, nil, nil, :description %>
+    <% if exp[:info] %>
+      \begin{itemize}
+        <% exp[:info].each do |info| %>
+          \item <%= info %>
+        <% end %>
+      \end{itemize}
+    <% end %>
+  \end{minipage}
 <% end %>
+
+\subsection{Other}
+<% item[:experience_other].each do |exp| %>
+  \begin{minipage}{\textwidth}
+  <%= cv_entry exp, :period, :employer, :function, nil, nil, :description %>
+  <% if exp[:info] %>
+    \begin{itemize}
+      <% exp[:info].each do |info| %>
+        \item <%= md2tex info %>
+      <% end %>
+    \end{itemize}
+  <% end %>
+  \end{minipage}
+<% end %>
+
 
 \section{Miscelaneous}
 \subsection{Hobbies}

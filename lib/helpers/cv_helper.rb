@@ -3,20 +3,22 @@ module CVHelper
     (filled * amount.to_i) + (open * (max - amount.to_i))
   end
 
-  def cv_entry(entry, *keys)
-    values = keys.map { |k| md2tex(entry[k].to_s).delete "\n" }
-    "\\cventry{#{values.join '}{'}}"
+  def stars_tex(amount)
+    stars(amount, filled: '\\FiveStar', open: '\\FiveStarOpen')
   end
 
-  def latex_proficiencies(proficiencies)
-    items = []
-    proficiencies.each do |proficiency, values|
-      bullets = stars proficiency, filled: '\\FiveStar', open: '\\FiveStarOpen'
-      items << "\\item[#{bullets}] #{md2tex values}"
-    end
+  def cv_entry(entry, *keys)
+    values = keys.map { |k| md2tex(entry[k].to_s).delete "\n" }
+    "\\vspace{.5em}\\cventry{#{values.join '}{'}}"
+  end
 
+  def latex_proficiencies(profs)
     result = []
-    result << '\\begin{itemize}[leftmargin=.5in]' << items << '\\end{itemize}'
+    result << '\\begin{minipage}{\\textwidth}' \
+           << '\\begin{itemize}[leftmargin=.5in]' \
+           << profs.map { |p, v| "\\item[#{stars_tex p}] #{md2tex v}" } \
+           << '\\end{itemize}' \
+           << '\\end{minipage}'
     result.join "\n"
   end
 
