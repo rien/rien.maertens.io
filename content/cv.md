@@ -21,7 +21,7 @@ phone: +32 491 07 03 45
 address: Adm. Ronarch straat 11, 8600 Diksmuide, Belgium
 
 description: >
-    I am a **student Computer Science at Ghent University**. I am mostly interested in the Web as a whole (web development, security, servers, networking, ...), Unix, Free and Open Source Software, and programming languages. Alongside my studies, I preside a student society focussed on Computer Science, represent my fellow students in student councils, and enjoy being creative on stage.
+    I am a **student Computer Science at Ghent University** with a creative mindset and a calm personality. I am mostly interested in the Web as a whole (web development, security, servers, networking, ...), Unix, Free and Open Source Software, and programming languages. Alongside my studies, I preside a student society focussed on Computer Science, represent my fellow students in student councils, and enjoy being creative on stage.
 experience_work:
     - function: Teaching Assistant
       employer: Ghent University
@@ -51,9 +51,10 @@ experience_other:
       period: 2017
       description: Presiding a student association focused around FOSS, GNU/Linux, learning new technologies and improving productivity.
       info:
-        - we have our own server infrastructure, with homemade applications
-        - we develop and maintain a handful of projects used troughout our university
-        - we provide IT support for some events organised by students
+        - Maintenance of our own server infrastructure and our homemade applications
+        - Developed and maintained a handful of projects used by students troughout Ghent University
+        - Provided IT support for some events organised by students, for students
+        - Organized talks, workshops, programming contests, ...
 
     - function: Crew Lead IT
       employer: Student Kick-Off
