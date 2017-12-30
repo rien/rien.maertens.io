@@ -5,22 +5,41 @@
   font-family: 'Fira Mono', monospace;
 }
 
+@media screen and (max-width: 680px) {
+  body {
+    font-size: 3vw;
+  }
+}
+
+.representations {
+  text-align: center;
+  margin-top: 1em;
+}
+
 .cv {
-  width: 680px;
+  max-width: 680px;
   padding: 2em;
   margin: auto;
 
   header {
+    @media (min-width: 680px){
+      .name-contact {
+        display: flex;
+        .name {
+          flex: 1;
+          margin: 1em 3em;
+          text-align: right;
+        }
+        .contact {
+          flex: 1;
+        }
+      }
+    }
     .name-contact {
-      display: flex;
 
       .name {
-        flex: 1;
-        margin: 1em 3em;
-
-        text-align: right;
-
         .firstname, .lastname {
+          text-align: center;
           margin: 0;
           padding: 0;
         }
@@ -34,7 +53,6 @@
         }
       }
       .contact {
-        flex: 1;
         margin-top: 1em;
         ul {
           padding-left: 0;
