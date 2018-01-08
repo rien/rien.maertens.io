@@ -21,29 +21,30 @@ phone: +32 491 07 03 45
 address: Adm. Ronarch straat 11, 8600 Diksmuide, Belgium
 
 description: >
-    I am a **student Computer Science at Ghent University** with a creative mindset and a calm personality. I am mostly interested in the Web as a whole (web development, security, servers, networking, ...), Unix, Free and Open Source Software, and programming languages. Alongside my studies, I preside a student society focussed on Computer Science, represent my fellow students in student councils, and enjoy being creative on stage.
+    Student Computer Science at Ghent University with a creative mindset and a calm personality. Interested in the Web as a whole (web development, security, servers, networking, ...), Unix, Free and Open Source Software, and programming languages. Leisure activities: presiding a student society focussed on Computer Science, representing my fellow students in student councils, and enjoying being creative on stage.
+
 experience_work:
     - function: Teaching Assistant
       employer: Ghent University
       period: 2017
-      description: As a student job, I assisted the exercise sessions of an introductory course to programming in Python. This course was given to the first bachelors chemistry, physics and biology.
+      description: Assisted with exercises and oversaw evaluations of an introductory course to programming in Python. This course was given to the first bachelors chemistry, physics and biology.
 
     - function: Web Application Developper
       employer: Ghent University
       period: 2017
-      description: I worked on [dodona](https://dodona.ugent.be), a platform for evaluating programming exercises written in Ruby on Rails.
+      description: Worked on [dodona](https://dodona.ugent.be), a platform for programming exercises written in Ruby on Rails which has already evaluated over one and a half million submissions.
       info:
         -   Added tests by writing a small 'framework' to automate rails' boilerplate-heavy tests.
         -   Extended the authorization capability
-        -   General maintenance and improvements
+        -   Maintained and improved the front-end
 
     - function: Web Application Developper
       employer: Ghent University
       period: 2016
-      description: I built a proof of concept application for visualizing an alternative representation for timelines.
+      description: Built a proof of concept application for visualizing an alternative representation for timelines.
       info:
-        -   Designed from scratch using Ruby on Rails and D3.js
-        -   Solo project
+        -   Designed and implemented this project from scratch
+        -   Written in Ruby on Rails and D3.js
 
 experience_other:
     - function: President
@@ -51,9 +52,9 @@ experience_other:
       period: 2017
       description: Presiding a student association focused around FOSS, GNU/Linux, learning new technologies and improving productivity.
       info:
-        - Maintenance of our own server infrastructure and our homemade applications
-        - Developed and maintained a handful of projects used by students troughout Ghent University
-        - Provided IT support for some events organised by students, for students
+        - Maintained our own server infrastructure
+        - Managed homemade applications used by students troughout our University
+        - Provided IT support for events organised by students, for students
         - Organized talks, workshops, programming contests, ...
 
     - function: Crew Lead IT
@@ -63,7 +64,7 @@ experience_other:
       info:
          - Migrated the web server to the cloud
          - Maintained the [website](https://studentkickoff.be/) and in-house applications
-         - Developed a tool for creating invoices
+         - Developed a application for creating invoices
          - Helped with the overall IT organization
 
     - function: Actor, secretary and webmaster
@@ -72,7 +73,7 @@ experience_other:
       description: Founder of a group of actors and creatives creating theatre productions.
       info:
         - Acted in & helped with the creation of different productions
-        - Helped founding our nonprofit organisation
+        - Founded our nonprofit organisation
         - '[Website](https://theatervolta.be/) design, maintenance and hosting'
 
     - function: Student Representative
