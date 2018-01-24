@@ -122,7 +122,7 @@ misc:
     - Tinkering with (cloud) servers and exploring new Linux distro's.
     - Improving my [dotfiles](https://github.com/Rien/puntbestanden) & workflow on my laptop running [Void Linux](https://www.voidlinux.eu/).
     - Being creative while acting, doing improv comedy, doing audiovisual design ...
-    - Learning about science (space, computer science, ...)
+    - Learning about science (space, computer science, quantum computing, ...)
 
   achievements:
     - Student Kick-Off volunteer of the year (2016)
