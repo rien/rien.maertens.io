@@ -85,22 +85,24 @@ experience_other:
         - Faculty of Sciences Student Counsil
         - Educational Committee Computer Science
 
-# Stars: 3 (experienced), 2 (good), 1 (basic)
+# Stars: 3 (experienced), 2 (good), 1 (intermediate), 0 (basic)
 programming:
   3: Ruby, Python
   2: JavaScript (+ HTML5 & CSS3), Java, Shell (Bash), C(++)
   1: SQL, Haskell, R
+  0: Go, Rust, Crystal
 
 technologies:
   3: Rails, Unix, LaTeX
   2: Ansible, Nginx, Sinatra, Nanoc, Android, Letsencrypt
-  1: PostgreSQL, MySQL, Postfix, Docker, Tensorflow
+  1: PostgreSQL, MySQL, Postfix, Tensorflow, MongoDB, Docker, NodeJS
 
-# Stars: 3 (native), 2 (fluent), 1 (basic)
+# Stars: 3 (native), 2 (fluent), 1 (intermediate), 0 (basic)
 languages:
   3: "Dutch"
   2: "English"
   1: "French"
+  0: "German"
 
 education:
   - degree: Master of Science in Computer Science
