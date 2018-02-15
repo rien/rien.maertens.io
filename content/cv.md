@@ -93,7 +93,7 @@ programming:
   0: Go, Rust, Crystal
 
 technologies:
-  3: Rails, Unix, LaTeX
+  3: Rails, Unix, LaTeX, Git
   2: Ansible, Nginx, Sinatra, Nanoc, Android, Letsencrypt
   1: PostgreSQL, MySQL, Postfix, Tensorflow, MongoDB, Docker, NodeJS
 
