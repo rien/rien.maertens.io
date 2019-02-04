@@ -31,7 +31,7 @@ end
 
 # Stylesheets
 compile '/assets/*.scss' do
-  filter :sass, syntax: :scss, style: :compressed
+  filter :sassc, syntax: :scss, style: :compressed
   filter :autoprefixer
   write item.identifier.without_ext.to_s.sub('/assets', '/css') + '.css'
 end

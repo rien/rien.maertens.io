@@ -11,11 +11,11 @@ gem 'byebug'
 
 gem 'kramdown'
 
-gem 'sass'
+gem 'sassc'
 
 gem 'adsf'
 
-gem 'therubyracer'
+gem 'mini_racer'
 
 gem 'autoprefixer-rails'
 
