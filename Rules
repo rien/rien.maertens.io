@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-require 'byebug'
 require 'nanoc/latexmk'
 
 compile '/key.asc.slim' do
@@ -30,10 +29,13 @@ compile '/**/*.slim' do
 end
 
 # Stylesheets
-compile '/assets/*.scss' do
-  filter :sassc, syntax: :scss, style: :compressed
+compile '/assets/css/*.scss' do
+  filter :sassc,
+         syntax: :scss,
+         style: :compressed,
+         load_paths: ['content/assets/css/']
   filter :autoprefixer
-  write item.identifier.without_ext.to_s.sub('/assets', '/css') + '.css'
+  write item.identifier.without_ext.to_s.sub('/assets/css', '/css') + '.css'
 end
 
 # Simplistic URL's

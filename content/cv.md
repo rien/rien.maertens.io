@@ -7,9 +7,8 @@ og:
   image: https://rien.maertens.io/img/rienmaertens.png
   'image:alt': Rien Maertens
   description: Curriculum Vitae of Rien Maertens, a student Computer Science
-
-# Disable purecss
-purecss: false
+stylesheets:
+    - cv.css
 
 first_name: Rien
 last_name: Maertens
