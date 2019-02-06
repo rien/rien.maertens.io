@@ -1,20 +1,19 @@
+@import "includes/vars";
+
 main {
   box-sizing: border-box;
   display: flex;
-  flex: 1;
-  flex-direction: row;
   flex-wrap: wrap;
-  max-width: 70em;
-  margin: auto;
-  padding: 1em;
+  margin: $baseline auto 0 auto;
+  max-width: 48*$baseline;
 }
 
 section {
   box-sizing: border-box;
   flex-grow: 1;
-  flex-basis: 25em;
+  flex-basis: 16*$baseline;
   max-width: 100%;
-  margin: 0 1em;
+  margin: 0 $baseline;
 }
 
 ul {
@@ -23,5 +22,5 @@ ul {
 }
 
 li > ul {
-  padding-left: 1em;
+  padding-left: $baseline;
 }

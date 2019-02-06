@@ -1,6 +1,5 @@
 @import "includes/normalize";
-
-$baseline: 16px;
+@import "includes/vars";
 
 @font-face {
   font-family: 'Fira Mono';
@@ -16,9 +15,10 @@ $baseline: 16px;
 }
 
 body{
-  font-size: $baseline;
+  padding-top: 6px;
+  font-size: 16px;
   font-family: 'Fira Mono', monospace;
-  line-height: 1.62;
+  line-height: $baseline;
   width: 100%;
 }
 
@@ -26,32 +26,6 @@ h1,h2,h3 {
   line-height: $baseline*2;
 }
 
-.held {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  width: fit-content;
-  margin: auto;
-
-  header {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-
-    h1 {
-      font-size: 12em;
-      margin: .2em 0;
-    }
-  }
-
-  nav {
-    display: flex;
-    flex-shrink: 1;
-    justify-content: center;
-    align-items: center;
-    a {
-      margin: 1em 1em;
-    }
-  }
+p, ul, h1, h2, h3 {
+  margin: 0 0 $baseline 0;
 }
