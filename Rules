@@ -6,18 +6,6 @@ compile '/key.asc.slim' do
   write ext: 'asc'
 end
 
-compile '/cv.md' do
-  filter :kramdown
-  layout '/cv.slim'
-  layout '/default.slim'
-end
-
-compile '/**/cv.md', rep: :pdf do
-  layout '/cv.tex.erb'
-  filter :latexmk, engine: :xelatex
-  write ext: 'pdf'
-end
-
 compile '/**/*.md' do
   filter :kramdown
   layout '/default.slim'

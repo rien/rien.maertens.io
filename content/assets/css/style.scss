@@ -1,10 +1,24 @@
 @import "includes/normalize";
 
-$baseline: 24px;
+$baseline: 16px;
+
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fira Mono Regular'), local('FiraMono-Regular'), url(/fonts/FiraMono-Regular.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Fira Mono Bold'), local('FiraMono-Bold'), url(/fonts/FiraMono-Bold.otf) format('opentype');
+}
 
 body{
-  font: 1.2em/1.62 monospace;
-  padding: 0 .62em;
+  font-size: $baseline;
+  font-family: 'Fira Mono', monospace;
+  line-height: 1.62;
   width: 100%;
 }
 
@@ -37,13 +51,7 @@ h1,h2,h3 {
     justify-content: center;
     align-items: center;
     a {
-      margin: .5em 1em;
+      margin: 1em 1em;
     }
-  }
-}
-
-@media print{
-  body{
-    max-width:none
   }
 }
