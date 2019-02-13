@@ -1,34 +1,32 @@
 ---
 title: Curriculum Vitae — Rien Maertens
-navigation: CV
-navigation: false
-
 og:
   type: website
   url: https://rien.maertens.io/cv/
   image: https://rien.maertens.io/img/rienmaertens.png
   'image:alt': Rien Maertens
-  description: Curriculum Vitae of Rien Maertens, a student Computer Science
+  description: Curriculum Vitae of Rien Maertens, a computer scientist.
 
-stylesheets:
-  - cv.css
+html_class: cv
+pdf_stylesheets:
+  - /assets/css/pdf.scss
+  - /assets/css/fira-mono.css.erb
 ---
-
 section
   markdown:
     # Rien Maertens
 
     A computer **scientist** with a **creative** mindset.
     Enjoys solving complex problems with **simple solutions**.
-    **Security** and **performance** aware, while staying **pragmatic**.
-    Improving the world by having an **impact**.
+    Has a nose for **security** and an appetite for **performance**.
+    Works towards a better world for everyone.
 
 section
   markdown:
     ## Contact
-      - [github.com/rien](http://github.com/rien)
-      - [rien.maertens@posteo.be](mailto:rien.maertens@posteo.be)
-      - [**PGP** 6EFE 691C 8362 F089 BB02  C293 6D87 6BD3 1366 2F0E](/key.asc)
+      - [github.com/rien](https://github.com/rien)
+      - [rien.maertens@posteo.be](mailto:rien.maertens+cv@posteo.be)
+      - [**PGP** 6EFE 691C 8362 F089 BB02<br>&nbsp;&nbsp;&nbsp;&nbsp;C293 6D87 6BD3 1366 2F0E](/key.asc)
 
 section
   markdown:
@@ -38,7 +36,7 @@ section
       [Unipept](https://unipept.ugent.be/). Optimizing and extending the existing
       Metagenomics Analysis pipeline written in **Rust**.
 
-    - **Optimization developer** as an intern in the summer of 2018.
+    - **Software developer** as an intern in the summer of 2018.
       Optimized the **Java** software responsible for optimal pole pacement at
       [Comsof](https://comsof.com/), a network optimization software company.
 
@@ -52,7 +50,7 @@ section
       I worked a total of 6 months (in intervals) on this **Ruby on Rails**
       application.
 
-    - **Systems administrator** and **board member** for the student association
+    - **Systems administrator** and **board member** of the student association
       [Zeus WPI](https://zeus.gent). Which focusses on creating fun projects,
       organising mind-opening events and promoting Free and Open Source Software.
 
@@ -60,8 +58,8 @@ section
   markdown:
     ## Technologies
 
-    - ★★★ Ruby (on Rails), Python, Unix, Git
-    - ★★☆ Web, Java, C(++), Rust, SQL, Nginx
+    - ★★★ Ruby (on Rails), Java, Python, Unix, Git
+    - ★★☆ Web, Rust, C(++), SQL, Nginx, Ansible
     - ★☆☆ R, Haskell, Go, Tensorflow, Docker, Postfix
 
     ## Education
@@ -73,4 +71,7 @@ section
       - **Discovering** and learning new technologies.
       - **Solving** puzzles, capture the flags and programming competitions.
       - **Performing** theatre and improv comedy.
+
+section.center.hidden-print
+  a href='/cv.pdf' Download as PDF
 

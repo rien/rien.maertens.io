@@ -19,6 +19,8 @@ gem 'mini_racer'
 
 gem 'autoprefixer-rails'
 
+gem 'pdfkit'
+
 group :nanoc do
   gem 'guard-nanoc'
   gem 'guard-livereload'
