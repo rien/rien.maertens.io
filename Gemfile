@@ -1,25 +1,16 @@
 # frozen_string_literal: true
 source 'https://rubygems.org'
 
-gem 'slim'
-
-gem 'nanoc'
-
-gem 'nanoc-latexmk'
-
-gem 'byebug'
-
-gem 'kramdown'
-
-gem 'sassc'
-
 gem 'adsf'
-
-gem 'mini_racer'
-
 gem 'autoprefixer-rails'
-
+gem 'byebug'
+gem 'htmlcompressor'
+gem 'kramdown'
+gem 'mini_racer'
+gem 'nanoc'
 gem 'pdfkit'
+gem 'sassc'
+gem 'slim'
 
 group :nanoc do
   gem 'guard-nanoc'

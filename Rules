@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-require 'nanoc/latexmk'
 
 # My GPG public key
 compile '/key.asc.slim' do
@@ -22,6 +21,7 @@ end
 compile '/**/*.slim' do
   filter :slim
   layout '/default.slim'
+  filter :html_press
 end
 
 # Compiled styleheet with font location (for PDF generation)
