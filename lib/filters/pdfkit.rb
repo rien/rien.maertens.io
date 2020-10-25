@@ -23,6 +23,7 @@ module Nanoc::Filters
         style_items = params.delete(:style_items)
         content = inline_styles(content, style_items)
       end
+      params[:enable_local_file_access] = true
       ::PDFKit.new(content, **params).to_file(output_filename)
     end
   end
