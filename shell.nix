@@ -7,7 +7,7 @@ pkgs.mkShell {
     pandoc
     texlive.combined.scheme-small
     wkhtmltopdf
-    ruby_3_0
+    ruby_3_1
     nodejs
     taglib
     zlib

@@ -9,6 +9,7 @@ gem 'nanoc', "~> 4.12"
 gem 'pdfkit', "~> 0.8"
 gem 'sassc', "~> 2.4"
 gem 'slim', "~> 4.1"
+gem 'puma'
 
 group :nanoc do
   gem 'guard-livereload', "~> 2.5"
