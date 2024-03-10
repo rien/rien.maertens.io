@@ -24,25 +24,6 @@ compile '/**/*.slim' do
   filter :html_press
 end
 
-# Compiled styleheet with font location (for PDF generation)
-compile '/assets/css/fira-mono.css.erb' do
-  filter :erb
-  write nil # only needed for compilation
-end
-
-# Downloadable PDF version, uses wkhtmltopdf
-compile '/cv.slim', rep: :pdf do
-  filter :slim
-  layout '/default.slim'
-  filter :pdfkit,
-          page_size: 'A4',
-          margin_left: '0.6in',
-          margin_right: '0.6in',
-          style_items: item[:pdf_stylesheets]
-  write ext: 'pdf'
-end
-
-
 # Simplistic URL's
 route '/**/*.{md,slim}' do
   if item.identifier =~ '/index.*'
