@@ -3,15 +3,7 @@ let
 in
 pkgs.mkShell {
   buildInputs = with pkgs; [
-    imagemagick
-    pandoc
-    texlive.combined.scheme-small
-    percollate
-    ruby_3_1
-    nodejs
-    taglib
-    zlib
-    libyaml
+    ruby
   ];
   shellHook = ''
     export GEM_HOME="$PWD/vendor/bundle/$(ruby -e 'puts RUBY_VERSION')"
