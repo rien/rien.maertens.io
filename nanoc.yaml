@@ -92,5 +92,5 @@ checks:
 deploy:
   default:
     kind: rsync
-    dst:  webhost@maertens.io:/srv/webhost/maertens.io
+    dst:  webhost@maertens.gent:/srv/webhost/maertens.gent
     options: [ '-glpPrtvz', '-e', 'ssh -p 9450', '--delete']

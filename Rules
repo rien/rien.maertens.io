@@ -1,27 +1,9 @@
 #!/usr/bin/env ruby
 
-# My GPG public key
-compile '/key.asc.slim' do
-  filter :slim
-  write ext: 'asc'
-end
-
-# Stylesheets
-compile '/assets/css/*.scss' do
-  filter :sassc,
-         syntax: :scss,
-         style: :compressed,
-         load_paths: ['content/assets/css/']
-  snapshot :css
-  filter :autoprefixer
-  write item.identifier.without_ext.to_s.sub('/assets/css', '/css') + '.css'
-end
-
 # Actual content
 compile '/**/*.slim' do
   filter :slim
   layout '/default.slim'
-  filter :html_press
 end
 
 # Simplistic URL's

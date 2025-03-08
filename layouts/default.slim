@@ -16,9 +16,8 @@ html lang="en"
       meta property="og:#{prop}" content=value
 
     / Stylesheet
+    link rel="stylesheet" href="/css/modern-normalize.css"
     link rel="stylesheet" href="/css/style.css"
-    - @item[:stylesheets].to_a.each do |sheet|
-      link rel="stylesheet" href="/css/#{sheet}"
 
     / Favicon
     link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"
